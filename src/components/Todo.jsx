@@ -18,23 +18,24 @@ function MarkHandler(id){
     console.log("Marked to set", id);
     dispatch(markAsDone(id));
 }
-    return(<>
+    return(
+<>
     <h1>Todos</h1>  
     <AddForm></AddForm>
-    
-    <ul>
-        {todos.map((todo)=>(
-            <li className="list" key = {todo.id}  style={{
-                textDecoration: todo.isDone ? "line-through" : "none",
-              }} >{todo.task}
-             <button className="delete" onClick={()=>deleteHandler(todo.id)}>Delete</button>
-             <button className="markasdone" onClick={()=>MarkHandler(todo.id)}>Mark as Done</button>
-            </li>
-        ))}
-    </ul>
-    
-    
-    </>)
+    <div className="listcontainer">
+        <ul> 
+            {todos.map((todo)=>(
+                <li className="list" key = {todo.id}  style={{textDecoration: todo.isDone ? "line-through" : "none",}} > 
+                    <span className="task">{todo.task}</span> 
+                    <div className="button-container">
+                        <button className="delete" onClick={()=>deleteHandler(todo.id)}>Delete</button>
+                        <button className="markasdone" onClick={()=>MarkHandler(todo.id)}>Mark as Done</button>
+                    </div>
+                </li>
+               ))}
+        </ul>
+    </div>
+</>)
 }
 
 export default Todo;
