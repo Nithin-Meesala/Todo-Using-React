@@ -3,8 +3,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  
-
 }
 
 .logo {
@@ -13,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -42,7 +42,8 @@
 .read-the-docs {
   color: #888;
 }
-.addtask{
+
+.addtask {
   padding: 10px 20px;
   font-size: 16px;
   color: #ecf0f1;
@@ -54,17 +55,16 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   margin-left: 10px;
 }
+
 .addtask:hover {
   background-color: #9b59b6;
 }
+
 .addtask:active {
   transform: scale(0.95);
 }
-.delete{
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.input{
+
+.input {
   width: 300px;
   padding: 10px;
   font-size: 16px;
@@ -74,67 +74,72 @@
   border-radius: 8px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
+
 .input:focus {
   border-color: #3498db;
   box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
   outline: none;
 }
+
 .list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   margin: 10px 0;
-  background-color: transparent;
+  background-color: #ecf0f1;
   color: #2c3e50;
-  border: 1px transparent;
+  border: 1px solid #bdc3c7;
   border-radius: 8px;
   transition: background-color 0.3s, transform 0.3s;
+}
+
+.list:hover {
+  background-color: #bdc3c7;
+  transform: translateY(-2px);
+}
+
+.task {
+  flex: 1;
+  padding-right: 10px;
+  line-height: 1.5; /* Ensures vertical alignment */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.delete, .markasdone {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #ecf0f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.delete {
+  background-color: #e74c3c;
+}
+
+.delete:hover {
+  background-color: #c0392b;
+}
+
+.markasdone {
+  background-color: #2ecc71;
+}
+
+.markasdone:hover {
+  background-color: #27ae60;
+}
+
+h1 {
   color: white;
 }
 
-  
-.list.li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    margin: 10px 0;
-    background-color: #ecf0f1;
-    color: #2c3e50;
-    border: 1px solid #bdc3c7;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-.list li:hover {
-    background-color: #bdc3c7;
-    transform: translateY(-2px);
-  }
-  .delete{
-    padding: 8px 12px;
-    font-size: 14px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    color: white  ;
-    background-color:  black;
-    transition: background-color 0.3s, transform 0.3s;
-
-  }
-  .markasdone{
-    padding: 8px 12px;
-    font-size: 14px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    
-    transition: background-color 0.3s, transform 0.3s;
-  }
-h1{
-  color: white;
-}
 .list .delete {
   background-color: #e74c3c;
 }
