@@ -79,11 +79,20 @@
   box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
   outline: none;
 }
-.list{
-  list-style: none;
-  padding: 0;
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   margin: 10px 0;
-  text-align: left;}
+  background-color: transparent;
+  color: #2c3e50;
+  border: 1px transparent;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  color: white;
+}
+
   
 .list.li {
     display: flex;
@@ -108,9 +117,10 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    color: white;
-    background-color: black;
+    color: white  ;
+    background-color:  black;
     transition: background-color 0.3s, transform 0.3s;
+
   }
   .markasdone{
     padding: 8px 12px;
@@ -119,12 +129,13 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    
     transition: background-color 0.3s, transform 0.3s;
   }
 h1{
   color: white;
 }
-list .delete {
+.list .delete {
   background-color: #e74c3c;
 }
 
